@@ -1,2 +1,1 @@
-My first readme
-My second on github
+# Shell basics
