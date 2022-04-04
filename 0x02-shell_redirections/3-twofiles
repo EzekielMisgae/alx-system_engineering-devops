@@ -1,2 +1,3 @@
 #!/bin/bash
 etc /etc/passwd /etc/hosts
+
