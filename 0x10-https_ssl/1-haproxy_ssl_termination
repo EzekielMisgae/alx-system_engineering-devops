@@ -33,17 +33,17 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-backend atieno.tech-backend
+backend ezekielmisgae.tech-backend
         balance roundrobin
         server 28430-web-01 3.236.237.165:80 check
         server 28430-web-02 44.210.105.35:80 check
 
-frontend atieno.tech-https-frontend
+frontend ezekielmisgae.tech-https-frontend
         bind 0.0.0.0:443 ssl crt /etc/haproxy/certs/www.atieno.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend atieno.tech-backend
 
-frontend atieno.tech-http-frontend
+frontend ezekielmisgae.tech-http-frontend
         bind 0.0.0.0:80
         http-request set-header X-Forwarded-Proto http
         default_backend atieno.tech-backend
