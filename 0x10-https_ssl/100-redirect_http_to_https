@@ -41,10 +41,10 @@ backend ezekielmisgae.tech-backend
 frontend ezekielmisgae.tech-https-frontend
         bind 0.0.0.0:443 ssl crt /etc/haproxy/certs/www.ezekielmisgae.tech.pem
         http-request set-header X-Forwarded-Proto https
-        default_backend atieno.tech-backend
+        default_backend ezekielmisgae.tech-backend
 
 frontend ezekielmisgae.tech-http-frontend
         bind 0.0.0.0:80
         redirect scheme https code 301 if !{ ssl_fc }
         http-request set-header X-Forwarded-Proto http
-        default_backend atieno.tech-backend
+        default_backend ezekielmisgae.tech-backend
