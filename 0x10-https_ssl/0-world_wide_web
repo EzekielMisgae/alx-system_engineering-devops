@@ -13,4 +13,4 @@ else
     print_info "lb-01.$1" "lb-01"
     print_info "web-01.$1" "web-01"
     print_info "web-02.$1" "web-02"
-fiii
+fi
