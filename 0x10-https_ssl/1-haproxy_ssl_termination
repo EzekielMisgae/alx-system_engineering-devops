@@ -43,5 +43,4 @@ frontend ezekielmisgae.tech-http-frontend
 backend ezekielmisgae.tech-backend
         balance roundrobin
         server 39331-web-01 54.157.131.98:80 check
-        server 39331-web-02 54.89.19.243:80 check
-        option httpchk                                                                                         
+        server 39331-web-02 54.89.19.243:80 check                                                                                        
