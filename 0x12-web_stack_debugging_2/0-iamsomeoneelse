@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Script to run whoami as another user passed as commnd argument
+# Usage: 0-iamsomeoneelse <username>
+
+sudo -u "$1" whoami
