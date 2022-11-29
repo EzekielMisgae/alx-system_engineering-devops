@@ -1,16 +1,17 @@
 #!/usr/bin/python3
-
-import requests as r
+"""function to get the number of subscribers in a subreddit"""
+import requests
 
 
 def number_of_subscribers(subreddit):
-    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
-    headers = {
-        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:73.0) \
-        Gecko/20100101 Firefox/73.0"
-    }
-    response = r.get(url, headers=headers, allow_redirects=False)
-    if response.status_code == 404:
+    """gets the number of subscribers"""
+    if subreddit is None:
         return 0
-    results = response.json().get("data")
-    return results.get("subscribers")
+    data = requests.get('http://www.reddit.com/r/{}/about.json'
+                        .format(subreddit),
+                        headers={"User-Agent": 'alx'}).json()
+    try:
+        nos = data.get('data').get('subscribers', 0)
+        return nos
+    except Exception:
+        return 0
